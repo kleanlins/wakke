@@ -1,13 +1,12 @@
 import React from 'react';
-import Week from './components/week/index'
-
+import Life from "./components/life";
 
 function App() {
-  return (
-    <div>
-      <Week />
-    </div>
-  );
+	return (
+	<div>
+		<Life/>
+	</div>
+	);
 }
 
 export default App;

@@ -1,18 +1,26 @@
 import React from 'react';
-import { StyledWeek } from './styles';
+import { StyledWeek, Active } from './styles';
 
-const Week = () => {
+const classNames = require('classnames');
 
-    const size = 20;
+const Week = (props) => {
 
-    return (
-        <div>
-            <StyledWeek size={size}/>
-            <StyledWeek size={size}/>
-            <StyledWeek size={size}/>
-        </div>
-    );
+	const {
+		size,
+		active
+	} = props;
+
+	const className = classNames(
+		'Week'
+	);
+
+	return (
+		<div className={className}>
+			{<StyledWeek size={size}>
+				{active && <Active size={size}/>}
+			</StyledWeek>}
+		</div>
+	);
 };
-
 
 export default Week;
